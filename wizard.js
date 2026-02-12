@@ -447,6 +447,5 @@ function showSuccess() {
   alert('✅ Erfolgreich!\n\nTemplate: ' + template.name);
   // Hier würde die echte Weiterleitung stattfinden
 };
-
 document.getElementById('current-step').textContent = '✓';
 }
