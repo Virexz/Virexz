@@ -436,16 +436,18 @@ function updateUI() {
 function showSuccess() {
   document.querySelectorAll('.vx-step').forEach(step => step.classList.remove('active'));
   document.getElementById('success-screen').classList.add('active');
-  
+
   const template = templates[wizardData.solution] || templates.landing;
   document.getElementById('template-name').textContent = template.name;
-  
+
   document.getElementById('prev-btn').style.display = 'none';
-  document.getElementById('next-btn').textContent = '🚀 Jetzt starten';
- document.getElementById('next-btn').onclick = function() {
-  console.log('Deine Daten:', wizardData);
-  alert('✅ Erfolgreich!\n\nTemplate: ' + template.name);
-  // Hier würde die echte Weiterleitung stattfinden
-};
-document.getElementById('current-step').textContent = '✓';
+
+  const nextBtn = document.getElementById('next-btn');
+  nextBtn.textContent = '🚀 Jetzt starten';
+  nextBtn.onclick = function () {
+    console.log('Deine Daten:', wizardData);
+    alert('✅ Erfolgreich!\n\nTemplate: ' + template.name);
+    // Hier würde die echte Weiterleitung stattfinden
+  };
+  document.getElementById('current-step').textContent = '✓';
 }
