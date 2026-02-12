@@ -449,4 +449,4 @@ function showSuccess() {
 };
 
 document.getElementById('current-step').textContent = '✓';
-});
+}
