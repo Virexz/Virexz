@@ -321,7 +321,6 @@ function showSuccess() {
     // Hier würde die echte Weiterleitung stattfinden
   };
   document.getElementById('current-step').textContent = '✓';
-
 let currentStep = 1;
 const totalSteps = 4;
 let wizardData = {};
