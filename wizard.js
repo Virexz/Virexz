@@ -442,11 +442,11 @@ function showSuccess() {
   
   document.getElementById('prev-btn').style.display = 'none';
   document.getElementById('next-btn').textContent = '🚀 Jetzt starten';
-  document.getElementById('next-btn').onclick = function() {
-    console.log('Deine Daten:', wizardData);
-    alert('✅ Erfolgreich!\n\nTemplate: ' + template.name + '\n\nDu wirst zu deinem Editor weitergeleitet...');
-    // Hier würde die echte Weiterleitung stattfinden
-  };
-  document.getElementById('current-step').textContent = '✓';
+ document.getElementById('next-btn').onclick = function() {
+  console.log('Deine Daten:', wizardData);
+  alert('✅ Erfolgreich!\n\nTemplate: ' + template.name);
+  // Hier würde die echte Weiterleitung stattfinden
+};
+
+document.getElementById('current-step').textContent = '✓';
 }
-});
